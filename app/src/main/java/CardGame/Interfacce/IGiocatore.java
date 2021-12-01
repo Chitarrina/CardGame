@@ -1,6 +1,8 @@
-package CardGameLibrary;
-public class IGiocatore {
+package CardGame.Interfacce;
+public interface IGiocatore {
     
-    public getNomeGiocatore();
+    public String getNomeGiocatore();
+    public void setNomeGiocator();
 
+    public boolean isMioTurno();
 }
