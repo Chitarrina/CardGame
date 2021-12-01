@@ -33,5 +33,11 @@ public class MazzoManager implements IMazzoManager{
         // TODO Auto-generated method stub
         
     }
+
+    @Override
+    public Integer getMaxCarte() {
+        // TODO Auto-generated method stub
+        return null;
+    }
     
 }
