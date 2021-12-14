@@ -4,13 +4,11 @@ import CardGame.Interfacce.IGiocoManager;
 
 public class GiocoManager implements IGiocoManager{
 
-    @Override
     public void setPunteggioVittoria() {
         // TODO Auto-generated method stub
         
     }
 
-    @Override
     public void setPrimoGiocatore() {
         // TODO Auto-generated method stub
         
@@ -34,7 +32,6 @@ public class GiocoManager implements IGiocoManager{
         return null;
     }
 
-    @Override
     public void setTurnoGiocatore() {
         // TODO Auto-generated method stub
         

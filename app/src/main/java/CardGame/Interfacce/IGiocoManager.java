@@ -3,13 +3,15 @@ package CardGame.Interfacce;
 import CardGame.Giocatore;
 
 public interface IGiocoManager{
-    public Integer getPunteggioVittoria();
-    public void setPunteggioVittoria();
 
-    public Giocatore getPrimoGiocatore();
-    public void setPrimoGiocatore();
+    Integer getPunteggioVittoria();
+    
+    Giocatore getPrimoGiocatore();
+    
+    Giocatore getTurnoGiocatore();
 
-    public Giocatore getTurnoGiocatore();
-    public void setTurnoGiocatore();
+
+    
+   
 
 }
