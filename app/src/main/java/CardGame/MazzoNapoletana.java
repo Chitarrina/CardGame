@@ -3,11 +3,11 @@ package CardGame;
 
 import CardGame.Interfacce.IMazzo;
 
-public class Mazzo implements IMazzo<Carta>{
+public class MazzoNapoletana implements IMazzo<Napoletana>{
   
 
     //array di carte (da capire quali strutture dati usare)
-    private Carta carta[];
+    private Carta carta;
     private Integer numeroCarte;
 
     @Override
@@ -22,7 +22,7 @@ public class Mazzo implements IMazzo<Carta>{
         return numeroCarte;
     }
     
-    public Mazzo(){
+    public MazzoNapoletana(){
         
     }
 

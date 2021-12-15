@@ -1,5 +1,5 @@
 package CardGame.Interfacce;
-public interface IMazzo<Carta> {
+public interface IMazzo<T> {
 
     boolean isOrdinato();
 

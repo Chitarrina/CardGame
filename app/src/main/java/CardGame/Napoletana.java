@@ -10,11 +10,11 @@ public class Napoletana {
     }
         
     public Seme seme;
-    public Integer valore;
+    public int valore;
 
     
 
-    public Napoletana(Seme seme, Integer valore){
+    public Napoletana(Seme seme, int valore){
         this.seme = seme;
         this.valore = valore;
     }
