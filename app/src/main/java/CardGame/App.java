@@ -3,19 +3,22 @@
  */
 package CardGame;
 
+import java.util.Collection;
+
 import javax.swing.plaf.basic.BasicButtonUI;
 
-import CardGame.Napoletana;
-import CardGame.Napoletana.Seme;
+import CardGame.CartaNapoletana.Seme;
 
 
-public class App {
+
+
+public class App<Napoletana> {
     public String getGreeting() {
         return "Hello World!";
     }
 
-    Carta<Napoletana> cartaNaple1 =  new Carta<Napoletana>(new Napoletana(Seme.BASTONI, 10));
-
+    CartaNapoletana<Napoletana> cartaNaple1 =  new CartaNapoletana<Napoletana>(Seme.BASTONI, 10);
+    MazzoNapoletana<Napoletana> mazzoNaple = new MazzoNapoletana<Napoletana> 
     
 
 }

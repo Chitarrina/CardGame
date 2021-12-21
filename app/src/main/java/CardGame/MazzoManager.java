@@ -17,27 +17,9 @@ public class MazzoManager implements IMazzoManager{
     }
 
     @Override
-    public void ordinaMazzo() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void setMaxCarte() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
     public void pesca() {
         // TODO Auto-generated method stub
         
     }
 
-    @Override
-    public Integer getMaxCarte() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    
 }
