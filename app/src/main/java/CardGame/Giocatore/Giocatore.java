@@ -1,6 +1,4 @@
-package CardGame;
-
-import CardGame.Interfacce.IGiocatore;
+package CardGame.Giocatore;
 
 public class Giocatore implements IGiocatore{
 

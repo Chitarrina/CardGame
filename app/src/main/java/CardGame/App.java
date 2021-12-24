@@ -3,11 +3,9 @@
  */
 package CardGame;
 
-import java.util.Collection;
 
-import javax.swing.plaf.basic.BasicButtonUI;
-
-import CardGame.CartaNapoletana.Seme;
+import CardGame.ClassiCarte.CartaNapoletana;
+import CardGame.ClassiCarte.CartaNapoletana.Seme;
 
 
 
@@ -18,7 +16,6 @@ public class App<Napoletana> {
     }
 
     CartaNapoletana<Napoletana> cartaNaple1 =  new CartaNapoletana<Napoletana>(Seme.BASTONI, 10);
-    MazzoNapoletana<Napoletana> mazzoNaple = new MazzoNapoletana<Napoletana> 
     
 
 }

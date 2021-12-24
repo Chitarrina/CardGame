@@ -1,40 +1,31 @@
-package CardGame;
+package CardGame.ClassiCarte;
 
-import CardGame.Interfacce.ICartaNapoletana;
+import CardGame.InterfacceCarte.ICartaNapoletana;
 
 public class CartaNapoletana<Napoletana> implements ICartaNapoletana<Napoletana> {
 
-    public enum Seme {
-        BASTONI,
-        COPPE,
-        DENARI,
-        SPADE;
-    }
-        
-    public Seme semeNapoletana;
-    public int valoreNapoletana;
-
-
+    private Seme semeNapoletana;
+    private int valoreNapoletana;
 
     public CartaNapoletana(Seme semeNapoletana, int valoreNapoletana) {
         this.semeNapoletana = semeNapoletana;
         this.valoreNapoletana = valoreNapoletana;
     }
 
+    
 
 
     @Override
     public void setSemeNapoletana() {
-         
+        // TODO Auto-generated method stub
+        
     }
-
-
 
     @Override
     public void setValoreNapoletana() {
         // TODO Auto-generated method stub
         
     }
-    
+
 }
 

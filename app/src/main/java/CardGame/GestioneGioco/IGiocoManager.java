@@ -1,6 +1,6 @@
-package CardGame.Interfacce;
+package CardGame.GestioneGioco;
 
-import CardGame.Giocatore;
+import CardGame.Giocatore.Giocatore;
 
 public interface IGiocoManager{
 

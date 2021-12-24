@@ -1,4 +1,4 @@
-package CardGame.Interfacce;
+package CardGame.Giocatore;
 public interface IGiocatore {
     
     public String getNomeGiocatore();
