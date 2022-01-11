@@ -1,8 +1,10 @@
-package CardGame.Giocatore;
-public interface IGiocatore {
-    
-    public String getNomeGiocatore();
-    public void setNomeGiocator();
+package cardgame.giocatore;
 
-    public boolean isMioTurno();
+import cardgame.carta.ICarta;
+
+public interface IGiocatore<C extends ICarta> {
+
+    public String getNome();
+
+    public C getMossa();
 }
