@@ -3,65 +3,19 @@
  */
 package cardgame;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import cardgame.carta.CartaNapoletana;
-import cardgame.classifica.ClassificaSemplice;
-import cardgame.classifica.IClassifica;
-import cardgame.enumerazione.StatoGioco;
-import cardgame.giocatore.GiocatoreDiCarteNapoletane;
-import cardgame.giocatore.IGiocatore;
-import cardgame.gioco.GiocoBriscola;
-import cardgame.gioco.IGioco;
-import cardgame.mazzo.IMazzo;
-import cardgame.mazzo.Mazzo;
-import cardgame.seme.SemiCarteNapoletane;
+import cardgame.giocoPiripicchio.gioco.Piripicchio;
+import cardgame.giocoPiripicchio.gioco.PiripicchioCreator;
+import cardgame.libreria.exception.CartaException;
 
 public class App {
-
     public static void main(String[] args) {
-        Collection<CartaNapoletana> carteNapoletane = new ArrayList<CartaNapoletana>();
-        for (SemiCarteNapoletane s : SemiCarteNapoletane.values()) {
-            for (int i = 1; i <= 10; i++) {
-                carteNapoletane.add(new CartaNapoletana(i, s));
-            }
+        Piripicchio gioco = new PiripicchioCreator().createGioco();
+        
+        try{
+            gioco.gioca();
+        }catch(CartaException cartaExcetption){
+            System.out.println("Carta Exception");
         }
 
-        IMazzo<CartaNapoletana> mazzoCarteNapoletane = new Mazzo<CartaNapoletana>(carteNapoletane);
-
-        System.out.println("Mazzo: " + mazzoCarteNapoletane);
-        System.out.println("Numero carte: " + mazzoCarteNapoletane.getCarteTotali());
-        System.out.println("Carte rimanenti: " + mazzoCarteNapoletane.getCarteRimanenti());
-        mazzoCarteNapoletane.shuffle();
-        System.out.println("Carta pescata: " + mazzoCarteNapoletane.pesca());
-        System.out.println("Numero carte: " + mazzoCarteNapoletane.getCarteTotali());
-        System.out.println("Carte rimanenti: " + mazzoCarteNapoletane.getCarteRimanenti());
-
-        GiocatoreDiCarteNapoletane giocatoreA = new GiocatoreDiCarteNapoletane("A");
-        GiocatoreDiCarteNapoletane giocatoreB = new GiocatoreDiCarteNapoletane("B");
-        GiocatoreDiCarteNapoletane giocatoreC = new GiocatoreDiCarteNapoletane("C");
-        List<IGiocatore<CartaNapoletana>> giocatori = Arrays.asList(giocatoreA, giocatoreB, giocatoreC);
-
-        IGioco<CartaNapoletana> briscola = new GiocoBriscola(
-                mazzoCarteNapoletane, giocatori);
-
-        Collection<String> nomeGiocatori = giocatori.stream().map(g -> g.getNome()).collect(Collectors.toList());
-        IClassifica classifica = new ClassificaSemplice(nomeGiocatori);
-        int turno = 0;
-
-        while (briscola.getStatoGioco() != StatoGioco.FINITO) {
-            IGiocatore<CartaNapoletana> giocatoreCorrente = giocatori.get(turno);
-            CartaNapoletana cartaDaGiocare = giocatoreCorrente.getMossa();
-            briscola.faiMossa(giocatoreCorrente, cartaDaGiocare);
-            turno = (turno + 1) % giocatori.size();
-            // TODO: implementare logica di gioco
-            // TODO: aggiornare punteggio classifica
-        }
-
-        System.out.println("Il vincitore è: " + classifica.getVincitore());
     }
 }
